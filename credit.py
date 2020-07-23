@@ -38,7 +38,7 @@ def luhn_algorithm(card_number):
 
     # Check if AMEX
     if len(card_number) == 15:
-        if card_number[0] == "3" and re.search("[47]", card_number[1]):
+        if card_number[0] == "3" and re.search("r[47]", card_number[1]):
             print("AMEX")
             exit()
         else:
@@ -50,7 +50,7 @@ def luhn_algorithm(card_number):
         if card_number[0] == "4":
             print("VISA")
             exit()
-        elif card_number[0] == "5" and re.search("[12345]", card_number[1]):
+        elif card_number[0] == "5" and re.search("r[12345]", card_number[1]):
             print("MASTERCARD")
             exit()
         else:
